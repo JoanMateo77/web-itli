@@ -4,8 +4,8 @@ import { useInView } from "react-intersection-observer";
 export const MarketingSection = () => {
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
-    rootMargin: '100px'
+    threshold: 0.5e, // Aumentamos el umbral para activar cuando un 30% del elemento sea visible
+    rootMargin: "200pxpx", // Activa un poco antes de que el elemento sea visible
   });
 
   useEffect(() => {
@@ -40,17 +40,14 @@ export const MarketingSection = () => {
 
     let resizeTimeout: NodeJS.Timeout;
     const observer = new ResizeObserver((entries) => {
-      // Clear any existing timeout
       clearTimeout(resizeTimeout);
-      
-      // Set a new timeout to batch resize operations
       resizeTimeout = setTimeout(() => {
         entries.forEach((entry) => {
           const cardIndex = cards.indexOf(entry.target as HTMLElement);
           if (cardIndex >= 0 && overlay.children[cardIndex]) {
             const width = entry.contentBoxSize[0]?.inlineSize || entry.contentRect.width;
             const height = entry.contentBoxSize[0]?.blockSize || entry.contentRect.height;
-            
+
             requestAnimationFrame(() => {
               if (overlay.children[cardIndex]) {
                 (overlay.children[cardIndex] as HTMLElement).style.width = `${width}px`;
@@ -83,33 +80,33 @@ export const MarketingSection = () => {
   }, []);
 
   return (
-    <main 
-      ref={sectionRef} 
-      className="main flow min-h-screen bg-gradient-to-br from-black via-blue-900/20 to-black" 
+    <main
+      ref={sectionRef}
+      className="main flow min-h-screen bg-gradient-to-br from-black via-blue-900/20 to-black"
       id="marketing"
-      style={{ 
-        willChange: 'transform, opacity',
-        transform: 'translateZ(0)',
-        backfaceVisibility: 'hidden',
-        width: '100%',
+      style={{
+        willChange: "transform, opacity",
+        transform: "translateZ(0)",
+        backfaceVisibility: "hidden",
+        width: "100%",
         margin: 0,
-        padding: '4rem 1rem'
+        padding: "4rem 1rem",
       }}
     >
-      <h1 
+      <h1
         className={`main__heading transform transition-all duration-1000 ${
-          inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
-        style={{ willChange: 'transform, opacity' }}
+        style={{ willChange: "transform, opacity" }}
       >
         Seguimos con los precios de 2024. ¡Compra ahora!
       </h1>
       <div className="main__cards cards">
         <div className="cards__inner">
           {/* Card 1 */}
-          <div 
+          <div
             className={`cards__card card transform transition-all duration-1000 ${
-              inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
             <h2 className="card__heading">Básico</h2>
@@ -119,13 +116,18 @@ export const MarketingSection = () => {
               <li>Integración: Meta Business, Facebook, Instagram y WhatsApp</li>
               <li>Mantenimiento Sitio web **Servicio de mantenimiento exclusivo para nuestros clientes**</li>
             </ul>
-            <a href="#basic" className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300">¡Contrátalo!</a>
+            <a
+              href="#basic"
+              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300"
+            >
+              ¡Contrátalo!
+            </a>
           </div>
 
           {/* Card 2 */}
-          <div 
+          <div
             className={`cards__card card transform transition-all duration-1000 delay-100 ${
-              inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
             <h2 className="card__heading">Más Popular</h2>
@@ -135,13 +137,18 @@ export const MarketingSection = () => {
               <li>Soporte prioritario por correo electrónico</li>
               <li>Acceso exclusivo a sesiones de Q&A en vivo</li>
             </ul>
-            <a href="#pro" className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300">Actualizar a Pro</a>
+            <a
+              href="#pro"
+              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300"
+            >
+              Actualizar a Pro
+            </a>
           </div>
 
           {/* Card 3 */}
-          <div 
+          <div
             className={`cards__card card transform transition-all duration-1000 delay-200 ${
-              inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
             <h2 className="card__heading">Premium</h2>
@@ -152,7 +159,12 @@ export const MarketingSection = () => {
               <li>Sesión de coaching virtual mensual</li>
               <li>Contenido exclusivo y acceso anticipado a nuevas funciones</li>
             </ul>
-            <a href="#ultimate" className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300">Ir a Ultimate</a>
+            <a
+              href="#ultimate"
+              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300"
+            >
+              Ir a Ultimate
+            </a>
           </div>
         </div>
         <div className="overlay cards__inner"></div>
