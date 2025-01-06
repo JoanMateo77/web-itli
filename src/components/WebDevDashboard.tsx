@@ -84,14 +84,19 @@ export const WebDevDashboard = () => {
             }`}
             style={{ willChange: "transform, opacity" }}
           >
-            <div className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg flex items-center justify-center">
-              <img
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
-                alt="Desarrollo Web"
-                className="object-cover rounded-lg w-full h-full"
-                loading="lazy"
-              />
-            </div>
+<div className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg flex items-center justify-center relative">
+  {/* Placeholder mientras carga */}
+  <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+  
+  {/* Imagen optimizada */}
+  <img
+    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=450&fit=crop"
+    alt="Desarrollo Web"
+    className="object-cover rounded-lg w-full h-full"
+    loading="lazy"
+  />
+</div>
+
             <button
               className={`w-full mt-4 p-4 bg-[#0d2f5a]/90 text-white rounded-lg hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300 transform hover:scale-105 ${
                 inView
