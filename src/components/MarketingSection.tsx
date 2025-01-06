@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect } from "react"; 
 import { useInView } from "react-intersection-observer";
 
 export const MarketingSection = () => {
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5e, // Aumentamos el umbral para activar cuando un 30% del elemento sea visible
-    rootMargin: "200pxpx", // Activa un poco antes de que el elemento sea visible
+    threshold: 0.5, // Activar cuando el 50% del elemento sea visible
+    rootMargin: "200px", // Activar un poco antes de que el elemento entre en el viewport
   });
 
   useEffect(() => {
@@ -94,7 +94,7 @@ export const MarketingSection = () => {
       }}
     >
       <h1
-        className={`main__heading transform transition-all duration-1000 ${
+        className={`main__heading transform transition-all duration-2000 delay-1000 ${
           inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
         style={{ willChange: "transform, opacity" }}
@@ -105,7 +105,7 @@ export const MarketingSection = () => {
         <div className="cards__inner">
           {/* Card 1 */}
           <div
-            className={`cards__card card transform transition-all duration-1000 ${
+            className={`cards__card card transform transition-all duration-2000 delay-1000 ${
               inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
@@ -126,7 +126,7 @@ export const MarketingSection = () => {
 
           {/* Card 2 */}
           <div
-            className={`cards__card card transform transition-all duration-1000 delay-100 ${
+            className={`cards__card card transform transition-all duration-2000 delay-1100 ${
               inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
@@ -147,7 +147,7 @@ export const MarketingSection = () => {
 
           {/* Card 3 */}
           <div
-            className={`cards__card card transform transition-all duration-1000 delay-200 ${
+            className={`cards__card card transform transition-all duration-2000 delay-1200 ${
               inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
