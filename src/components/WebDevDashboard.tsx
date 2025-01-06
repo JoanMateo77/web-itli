@@ -85,8 +85,7 @@ export const WebDevDashboard = () => {
             style={{ willChange: "transform, opacity" }}
           >
 <div className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg flex items-center justify-center relative">
-  {/* Placeholder mientras carga */}
-  <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+
   
   {/* Imagen optimizada */}
   <img
