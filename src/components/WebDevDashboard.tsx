@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 export const WebDevDashboard = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3, // Activa cuando el 30% del elemento es visible
+    threshold: 0.2, // Activa cuando el 30% del elemento es visible
     rootMargin: "100px", // Activa antes de que entre en pantalla
   });
 
@@ -16,7 +16,7 @@ export const WebDevDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2
-          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-2000  ${
+          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-1000  ${
             inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
