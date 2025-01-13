@@ -4,8 +4,8 @@ import { useInView } from "react-intersection-observer";
 export const MarketingSection = () => {
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5, // Activar cuando el 50% del elemento sea visible
-    rootMargin: "200px", // Activar un poco antes de que el elemento entre en el viewport
+    threshold: 0.3, // Activar cuando el 50% del elemento sea visible
+    rootMargin: "100px", // Activar un poco antes de que el elemento entre en el viewport
   });
 
   useEffect(() => {
@@ -89,6 +89,7 @@ export const MarketingSection = () => {
         transform: "translateZ(0)",
         backfaceVisibility: "hidden",
         width: "100%",
+    
         margin: 0,
         padding: "4rem 1rem",
       }}
