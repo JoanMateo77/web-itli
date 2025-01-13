@@ -16,7 +16,7 @@ export const WebDevDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2
-          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-2000 delay-1000 ${
+          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-2000  ${
             inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
