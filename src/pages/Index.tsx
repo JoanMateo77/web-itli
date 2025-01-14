@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 const Index = () => {
   const { ref: heroRef, inView: heroInView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.3
   });
 
   return (

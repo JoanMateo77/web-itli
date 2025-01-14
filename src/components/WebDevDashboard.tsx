@@ -4,8 +4,8 @@ import { useInView } from "react-intersection-observer";
 export const WebDevDashboard = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2, // Activa cuando el 30% del elemento es visible
-    rootMargin: "100px", // Activa antes de que entre en pantalla
+    threshold: 0.3, // Activa cuando el 30% del elemento es visible
+    rootMargin: "0px", // Activa antes de que entre en pantalla
   });
 
   return (
@@ -16,8 +16,8 @@ export const WebDevDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2
-          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-1000  ${
-            inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-1000 ${
+            inView ? "translate-y-0 opacity-100 visible" : "translate-y-10 opacity-0 invisible"
           }`}
         >
           Servicios de Desarrollo Web
@@ -26,10 +26,10 @@ export const WebDevDashboard = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Section */}
           <div
-            className={`space-y-6 transform transition-transform duration-2000 delay-1000 ${
+            className={`space-y-6 transform transition-transform duration-1000 ${
               inView
-                ? "translate-x-0 opacity-100"
-                : "-translate-x-10 scale-95 opacity-0"
+                ? "translate-x-0 opacity-100 visible"
+                : "-translate-x-10 scale-95 opacity-0 invisible"
             }`}
           >
             {/* Card 1 */}
@@ -37,8 +37,10 @@ export const WebDevDashboard = () => {
               <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Code className="h-6 w-6 text-blue-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Desarrollo Frontend</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-400 transition-all duration-300">
+                Desarrollo Frontend
+              </h3>
+              <p className="text-gray-400 hover:text-blue-300 transition-all duration-300">
                 Creamos interfaces modernas y responsivas utilizando las últimas
                 tecnologías.
               </p>
@@ -49,8 +51,10 @@ export const WebDevDashboard = () => {
               <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Server className="h-6 w-6 text-purple-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Desarrollo Backend</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold mb-2 hover:text-purple-400 transition-all duration-300">
+                Desarrollo Backend
+              </h3>
+              <p className="text-gray-400 hover:text-purple-300 transition-all duration-300">
                 Implementamos APIs robustas y escalables para tu aplicación.
               </p>
             </div>
@@ -60,10 +64,10 @@ export const WebDevDashboard = () => {
               <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Globe className="h-6 w-6 text-green-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 hover:text-green-400 transition-all duration-300">
                 Despliegue y Mantenimiento
               </h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400 hover:text-green-400">
                 Nos encargamos del hosting, dominio y mantenimiento continuo.
               </p>
             </div>
@@ -71,28 +75,25 @@ export const WebDevDashboard = () => {
 
           {/* Right Section */}
           <div
-            className={`order-first md:order-last transform transition-transform duration-2000 delay-1200 ${
+            className={`order-first md:order-last transform transition-transform duration-1000 ${
               inView
-                ? "translate-x-0 scale-100 opacity-100"
-                : "translate-x-10 scale-95 opacity-0"
+                ? "translate-x-0 opacity-100 visible"
+                : "translate-x-10 opacity-0 invisible"
             }`}
           >
             <div className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg flex items-center justify-center relative">
               <img
                 src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=450&fit=crop"
                 alt="Desarrollo Web"
-                className="object-cover rounded-lg w-full h-full"
+                className="object-cover rounded-lg w-full h-full transform transition-transform duration-1000"
                 loading="lazy"
               />
             </div>
 
             <button
-              className={`w-full mt-4 p-4 bg-[#0d2f5a]/90 text-white rounded-lg hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300 transform hover:scale-105 ${
-                inView
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
+              className={`w-full mt-4 p-4 bg-[#0d2f5a]/90 text-white rounded-lg hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-1000 transform ${
+                inView ? "translate-x-0 opacity-100 visible" : "translate-x-10 opacity-0 invisible"
               }`}
-              style={{ willChange: "transform, opacity" }}
             >
               Cotizar
             </button>
