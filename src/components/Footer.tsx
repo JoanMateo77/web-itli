@@ -15,7 +15,7 @@ export const Footer = () => {
           <h3 className="text-xl font-bold mb-4">Contacto</h3>
           <ul className="space-y-2 text-gray-400">
             <li>Email: contacto@itli.com</li>
-            <li>Tel: +57 300 000 0000</li>
+            <li>Tel: +57 322 5409818</li>
             <li>Bogotá, Colombia</li>
           </ul>
         </div>

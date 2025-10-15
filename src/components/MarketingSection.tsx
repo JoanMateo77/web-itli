@@ -118,7 +118,8 @@ export const MarketingSection = () => {
               <li>Mantenimiento Sitio web **Servicio de mantenimiento exclusivo para nuestros clientes**</li>
             </ul>
             <a
-              href="#basic"
+              href="https://wa.me/573113596134?text=Hola,%20quiero%20contratar%20el%20plan%20B%C3%A1sico
+"
               className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all "
             >
               ¡Contrátalo!
@@ -139,7 +140,8 @@ export const MarketingSection = () => {
               <li>Acceso exclusivo a sesiones de Q&A en vivo</li>
             </ul>
             <a
-              href="#pro"
+              href="https://wa.me/573113596134?text=Hola,%20estoy%20interesado%20en%20el%20plan%20Pro
+"
               className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all "
             >
               Actualizar a Pro
@@ -161,7 +163,8 @@ export const MarketingSection = () => {
               <li>Contenido exclusivo y acceso anticipado a nuevas funciones</li>
             </ul>
             <a
-              href="#ultimate"
+              href="https://wa.me/573113596134?text=Hola,%20quiero%20adquirir%20el%20plan%20Ultimate
+"
               className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all"
             >
               Ir a Ultimate

@@ -84,6 +84,7 @@ export const MarketingDashboard = () => {
               />
             </div>
               <button
+               onClick={() => window.open("https://wa.me/573113596134", "_blank")}
               className={`w-full mt-4 p-4 bg-[#0d2f5a]/90 text-white rounded-lg hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-1000 transform ${
                 inView ? "translate-x-0 opacity-100 visible" : "translate-x-10 opacity-0 invisible"
               }`}
