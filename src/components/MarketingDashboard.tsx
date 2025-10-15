@@ -36,10 +36,10 @@ export const MarketingDashboard = () => {
               <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Target className="h-6 w-6 text-purple-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2  hover:text-purple-400 transition-all " >
                 Marketing Estratégico
               </h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400  hover:text-purple-300 transition-all " >
                 Desarrollamos estrategias personalizadas para alcanzar tus
                 objetivos.
               </p>
@@ -50,10 +50,10 @@ export const MarketingDashboard = () => {
               <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="h-6 w-6 text-pink-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2  hover:text-pink-400 transition-all ">
                 Análisis y Optimización
               </h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400  hover:text-pink-300 transition-all ">
                 Monitoreamos y optimizamos constantemente tus campañas.
               </p>
             </div>
@@ -63,8 +63,8 @@ export const MarketingDashboard = () => {
               <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4">
                 <BarChart className="h-6 w-6 text-orange-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Reportes y Métricas</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-semibold mb-2  hover:text-orange-400 transition-all ">Reportes y Métricas</h3>
+              <p className="text-gray-400  hover:text-orange-300 transition-all ">
                 Informes detallados del rendimiento de tus campañas.
               </p>
             </div>
