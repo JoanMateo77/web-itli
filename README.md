@@ -1,69 +1,54 @@
-# Welcome to your Lovable project
 
-## Project info
 
-**URL**: https://lovable.dev/projects/3a1af683-323e-4e70-939a-ad88498bdd33
+---
 
-## How can I edit this code?
+## 🖥️ ITLI Web – Landing Page Profesional
 
-There are several ways of editing your application.
+Este proyecto es una landing page moderna desarrollada para presentar los servicios de ITLI con animaciones fluidas, componentes reutilizables y un diseño totalmente responsive.
 
-**Use Lovable**
+### 🚀 Tecnologías utilizadas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3a1af683-323e-4e70-939a-ad88498bdd33) and start prompting.
+Este proyecto está construido con:
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Vite** – Bundler rápido para desarrollo moderno
+* **React** – Librería para interfaces de usuario
+* **TypeScript** – Tipado estático y mejor mantenibilidad
+* **Tailwind CSS** – Estilos con utilidades y diseño responsive
+* **shadcn-ui** – Componentes UI personalizables y accesibles
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Instalación y ejecución
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Sigue estos pasos para correr el proyecto localmente:
 
-Follow these steps:
+### ✅ 1. Clonar el repositorio
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+git clone https://github.com/TU-USUARIO/TU-REPO.git
+cd nombre-del-proyecto
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### ✅ 2. Instalar dependencias
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### ✅ 3. Iniciar el entorno de desarrollo
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### ✅ 4. Abrir en el navegador
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Generalmente se ejecuta en:
 
-**Use GitHub Codespaces**
+```
+http://localhost:5173/
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
 
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3a1af683-323e-4e70-939a-ad88498bdd33) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
