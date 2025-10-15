@@ -4,8 +4,8 @@ import { useInView } from "react-intersection-observer";
 export const WebDevDashboard = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3, // Activa cuando el 30% del elemento es visible
-    rootMargin: "0px", // Activa antes de que entre en pantalla
+    threshold: 0.1, // Activa cuando el 30% del elemento es visible
+    rootMargin: "10px", // Activa antes de que entre en pantalla
   });
 
   return (
@@ -16,7 +16,7 @@ export const WebDevDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2
-          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-1000 ${
+          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all ${
             inView ? "translate-y-0 opacity-100 visible" : "translate-y-10 opacity-0 invisible"
           }`}
         >
@@ -26,7 +26,7 @@ export const WebDevDashboard = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Section */}
           <div
-            className={`space-y-6 transform transition-transform duration-1000 ${
+            className={`space-y-6 transform transition-transform  ${
               inView
                 ? "translate-x-0 opacity-100 visible"
                 : "-translate-x-10 scale-95 opacity-0 invisible"
@@ -37,10 +37,10 @@ export const WebDevDashboard = () => {
               <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Code className="h-6 w-6 text-blue-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-400 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-400 transition-all ">
                 Desarrollo Frontend
               </h3>
-              <p className="text-gray-400 hover:text-blue-300 transition-all duration-300">
+              <p className="text-gray-400 hover:text-blue-300 transition-all">
                 Creamos interfaces modernas y responsivas utilizando las últimas
                 tecnologías.
               </p>
@@ -51,10 +51,10 @@ export const WebDevDashboard = () => {
               <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Server className="h-6 w-6 text-purple-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 hover:text-purple-400 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-2 hover:text-purple-400 transition-all ">
                 Desarrollo Backend
               </h3>
-              <p className="text-gray-400 hover:text-purple-300 transition-all duration-300">
+              <p className="text-gray-400 hover:text-purple-300 transition-all">
                 Implementamos APIs robustas y escalables para tu aplicación.
               </p>
             </div>
@@ -64,7 +64,7 @@ export const WebDevDashboard = () => {
               <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
                 <Globe className="h-6 w-6 text-green-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 hover:text-green-400 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-2 hover:text-green-400 transition-all">
                 Despliegue y Mantenimiento
               </h3>
               <p className="text-gray-400 hover:text-green-400">
@@ -75,7 +75,7 @@ export const WebDevDashboard = () => {
 
           {/* Right Section */}
           <div
-            className={`order-first md:order-last transform transition-transform duration-1000 ${
+            className={`order-first md:order-last transform transition-transform ${
               inView
                 ? "translate-x-0 opacity-100 visible"
                 : "translate-x-10 opacity-0 invisible"

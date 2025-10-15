@@ -95,7 +95,7 @@ export const MarketingSection = () => {
       }}
     >
       <h1
-        className={`main__heading transform transition-all duration-2000 delay-1000 ${
+        className={`main__heading transform transition-all  ${
           inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
         style={{ willChange: "transform, opacity" }}
@@ -119,7 +119,7 @@ export const MarketingSection = () => {
             </ul>
             <a
               href="#basic"
-              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300"
+              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all "
             >
               ¡Contrátalo!
             </a>
@@ -127,7 +127,7 @@ export const MarketingSection = () => {
 
           {/* Card 2 */}
           <div
-            className={`cards__card card transform transition-all duration-2000 delay-1100 ${
+            className={`cards__card card transform transition-all duration-2000 ${
               inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
@@ -140,7 +140,7 @@ export const MarketingSection = () => {
             </ul>
             <a
               href="#pro"
-              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300"
+              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all "
             >
               Actualizar a Pro
             </a>
@@ -162,7 +162,7 @@ export const MarketingSection = () => {
             </ul>
             <a
               href="#ultimate"
-              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-300"
+              className="card__cta cta bg-[#0d2f5a]/90 hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all"
             >
               Ir a Ultimate
             </a>

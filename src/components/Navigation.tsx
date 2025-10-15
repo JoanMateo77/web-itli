@@ -17,7 +17,7 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all ${
         isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
@@ -25,7 +25,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <a href="#inicio" className="flex items-center space-x-2">
             <img
-              src="/lovable-uploads/f815e504-8122-4618-b5fd-de922f17dcef.png"
+              src="/photos/f815e504-8122-4618-b5fd-de922f17dcef.png"
               alt="ITLI Logo"
               className="h-12 w-12 object-contain"
             />

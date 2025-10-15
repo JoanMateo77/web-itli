@@ -4,8 +4,8 @@ import { useInView } from "react-intersection-observer";
 export const MarketingDashboard = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5, // Activa cuando el 50% del elemento es visible
-    rootMargin: "200px", // Activar un poco antes de que entre en el viewport
+    threshold: 0.1, // Activa cuando el 50% del elemento es visible
+    rootMargin: "10px", // Activar un poco antes de que entre en el viewport
   });
 
   // Comentario: Esta sección contiene los servicios de marketing digital
@@ -17,7 +17,7 @@ export const MarketingDashboard = () => {
       <div className="max-w-7xl mx-auto">
         {/* Título de la sección */}
         <h2
-          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all duration-2000 delay-1000 ${
+          className={`text-4xl md:text-5xl font-bold text-center mb-12 transform transition-all ${
             inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
@@ -27,7 +27,7 @@ export const MarketingDashboard = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Tarjetas de servicios */}
           <div
-            className={`space-y-6 transform transition-all duration-2000 delay-1000 ${
+            className={`space-y-6 transform transition-all   ${
               inView ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
@@ -72,7 +72,7 @@ export const MarketingDashboard = () => {
 
           {/* Imagen del servicio */}
           <div
-            className={`transform transition-all duration-2000 delay-1000 ${
+            className={`transform transition-all duration-3000${
               inView ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
           >
@@ -83,6 +83,13 @@ export const MarketingDashboard = () => {
                 className="object-cover rounded-lg w-full h-full"
               />
             </div>
+              <button
+              className={`w-full mt-4 p-4 bg-[#0d2f5a]/90 text-white rounded-lg hover:bg-[#1a4980] hover:shadow-[0_0_15px_rgba(26,73,128,0.5)] transition-all duration-1000 transform ${
+                inView ? "translate-x-0 opacity-100 visible" : "translate-x-10 opacity-0 invisible"
+              }`}
+            >
+              Cotizar
+            </button>
           </div>
         </div>
       </div>
