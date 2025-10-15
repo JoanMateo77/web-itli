@@ -15,7 +15,7 @@ export const Footer = () => {
           <h3 className="text-xl font-bold mb-4">Contacto</h3>
           <ul className="space-y-2 text-gray-400">
             <li>Email: contacto@itli.com</li>
-            <li>Tel: +57 322 5409818</li>
+            <li>Tel: +57 311 359 6143</li>
             <li>Bogotá, Colombia</li>
           </ul>
         </div>
@@ -26,7 +26,7 @@ export const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
               <Facebook className="h-6 w-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.instagram.com/itli_innovations/?utm_source=ig_web_button_share_sheet" className="text-gray-400 hover:text-white transition-colors">
               <Instagram className="h-6 w-6" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
